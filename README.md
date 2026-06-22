@@ -1,4 +1,4 @@
-# GIAC.mx – Plataforma Web Administrable
+# giac.mx – Plataforma Web Administrable
 
 GIAC.mx es una plataforma web desarrollada para ofrecer a clientes y visitantes un **landing page informativo**, junto con secciones internas que presentan información detallada sobre los servicios y áreas principales de la empresa.  
 El sistema incluye un **dashboard privado de administración**, desde el cual la empresa puede modificar en tiempo real el contenido mostrado en el sitio público, garantizando dinamismo, control y actualización continua.
