@@ -1,6 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
+import { contact } from '@/lib/site';
+
 type ContactBody = {
     name?: string;
     company?: string;
@@ -19,7 +21,7 @@ const getEnv = (key: string) => process.env[key]?.trim() || '';
 export default async function handler(req: NextApiRequest, res: NextApiResponse<ContactResponse>) {
     if (req.method !== 'POST') {
         res.setHeader('Allow', 'POST');
-        return res.status(405).json({ message: 'Metodo no permitido.' });
+        return res.status(405).json({ message: 'Método no permitido.' });
     }
 
     const { name = '', company = '', email = '', description = '' } = req.body as ContactBody;
@@ -29,11 +31,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     const cleanDescription = description.trim();
 
     if (!cleanName || !cleanEmail || !cleanDescription) {
-        return res.status(400).json({ message: 'Nombre, email y descripcion son obligatorios.' });
+        return res.status(400).json({ message: 'Nombre, correo electrónico y descripción son obligatorios.' });
     }
 
     if (!isValidEmail(cleanEmail)) {
-        return res.status(400).json({ message: 'El email no tiene un formato valido.' });
+        return res.status(400).json({ message: 'El correo electrónico no tiene un formato válido.' });
     }
 
     const host = getEnv('SMTP_HOST');
@@ -41,7 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     const user = getEnv('SMTP_USER');
     const pass = getEnv('SMTP_PASS');
     const from = getEnv('MAIL_FROM') || user;
-    const to = getEnv('CONTACT_TO_EMAIL') || user;
+    const to = getEnv('CONTACT_TO_EMAIL') || contact.email || user;
 
     if (!host || !port || !user || !pass || !from || !to) {
         return res.status(500).json({ message: 'Faltan variables SMTP en el servidor.' });
@@ -58,13 +60,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     });
 
     const text = [
-        'NUEVA SOLICITUD DE COTIZACION',
+        'NUEVA SOLICITUD DE COTIZACIÓN',
         '',
         `Nombre: ${cleanName}`,
         `Empresa: ${cleanCompany || 'No especificada'}`,
-        `Email: ${cleanEmail}`,
+        `Correo electrónico: ${cleanEmail}`,
         '',
-        'Descripcion del proyecto:',
+        'Descripción del proyecto:',
         cleanDescription,
     ].join('\n');
 
@@ -80,6 +82,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         return res.status(200).json({ message: 'Solicitud enviada correctamente.' });
     } catch (error) {
         console.error('Contact email error:', error);
-        return res.status(500).json({ message: 'No pudimos enviar el correo. Intenta de nuevo mas tarde.' });
+        return res.status(500).json({ message: 'No pudimos enviar el correo. Intenta de nuevo más tarde.' });
     }
 }

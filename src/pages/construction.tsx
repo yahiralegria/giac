@@ -9,14 +9,14 @@ export default function ConstructionPage() {
     return (
         <>
             <Head>
-                <title>Servicios de Construccion | GIAC Oil & Gas</title>
+                <title>Servicios de Construcción | GIAC Oil & Gas</title>
             </Head>
             <main className="page-shell">
                 <section className="section-heading">
-                    <h1>Servicios de Construccion</h1>
+                    <h1>Servicios de Construcción</h1>
                     <p>
-                        Ofrecemos soluciones integrales para el desarrollo de proyectos en el sector energetico,
-                        petroquimico y de transporte de fluidos.
+                        Ofrecemos soluciones integrales para el desarrollo de proyectos en el sector energético,
+                        petroquímico y de transporte de fluidos.
                     </p>
                 </section>
 

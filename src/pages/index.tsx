@@ -21,7 +21,7 @@ export default function HomePage() {
                     title="Construyendo el futuro"
                     body="GIAC OIL & GAS es una empresa mexicana, socialmente responsable. Realiza proyectos de ingeniería en gasoductos para gas natural e incursiona en proyectos integrales para el sector energético, proponiendo soluciones innovadoras para la medición, regulación, análisis y control de fluidos."
                     video="/assets/header.webm"
-                    cta={{ href: '/projects/engineering', label: 'Conocer más' }}
+                    cta={{ href: '/us', label: 'Conocer más' }}
                 />
 
                 <HeroSection

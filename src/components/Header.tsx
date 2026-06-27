@@ -38,16 +38,16 @@ export default function Header() {
             <button
                 className="menu-button"
                 type="button"
-                aria-label={isOpen ? 'Cerrar menu' : 'Abrir menu'}
+                aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
                 aria-expanded={isOpen}
                 onClick={() => setIsOpen((value) => !value)}
             >
                 {isOpen ? <X size={26} /> : <Menu size={28} />}
             </button>
 
-            {isOpen && <button className="menu-backdrop" aria-label="Cerrar menu" onClick={() => setIsOpen(false)} />}
+            {isOpen && <button className="menu-backdrop" aria-label="Cerrar menú" onClick={() => setIsOpen(false)} />}
 
-            <nav className={isOpen ? 'nav nav-open' : 'nav'} aria-label="Navegacion principal">
+            <nav className={isOpen ? 'nav nav-open' : 'nav'} aria-label="Navegación principal">
                 {navLinks.map((link) => {
                     const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
 

@@ -1,6 +1,6 @@
-# giac.mx - Sitio publico
+# giac.mx - Sitio público
 
-Sitio publico de GIAC Oil & Gas migrado a Next.js. El proyecto contiene solo el frontend visible para usuarios: landing, secciones informativas, servicios, proyectos, certificaciones y contacto.
+Sitio público de GIAC Oil & Gas migrado a Next.js. El proyecto contiene solo el frontend visible para usuarios: landing, secciones informativas, servicios, certificaciones y contacto.
 
 ## Stack
 
@@ -8,7 +8,7 @@ Sitio publico de GIAC Oil & Gas migrado a Next.js. El proyecto contiene solo el 
 - React
 - TypeScript
 - CSS global
-- Assets estaticos en `public/assets`
+- Assets estáticos en `public/assets`
 
 ## Rutas
 
@@ -16,8 +16,6 @@ Sitio publico de GIAC Oil & Gas migrado a Next.js. El proyecto contiene solo el 
 - `/us`
 - `/engineering`
 - `/construction`
-- `/projects/engineering`
-- `/projects/construction`
 - `/certifications`
 - `/contact`
 
@@ -36,17 +34,17 @@ El sitio local abre en `http://localhost:3000`.
 npm run build
 ```
 
-La configuracion usa `output: 'export'`, por lo que el sitio se exporta como archivos estaticos en `out/`.
+La configuración usa `output: 'export'`, por lo que el sitio se exporta como archivos estáticos en `out/`.
 
 ## Contenido
 
-Los datos de servicios, proyectos, certificaciones y clientes viven en:
+Los datos de servicios, certificaciones y clientes viven en:
 
 ```text
 src/data/content.ts
 ```
 
-Los datos generales de navegacion y contacto viven en:
+Los datos generales de navegación y contacto viven en:
 
 ```text
 src/lib/site.ts
