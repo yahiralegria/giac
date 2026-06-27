@@ -52,16 +52,18 @@ export default function HomePage() {
                 />
 
                 <section className="software-section home-software">
-                    <div className="software-media">
-                        <img src={engineeringSoftwareImage} alt="Software especializado para ingeniería y construcción" />
-                    </div>
-                    <div className="software-copy">
-                        <span className="eyebrow blue">Software especializado</span>
-                        <h2>Software técnico para diseño, cálculo y modelado</h2>
-                        <p>
-                            Herramientas utilizadas para modelado, cálculo, análisis y diseño técnico en proyectos
-                            industriales y energéticos.
-                        </p>
+                    <div className="software-content">
+                        <div className="software-copy">
+                            <span className="eyebrow blue">Software especializado</span>
+                            <h2>Software técnico para diseño, cálculo y modelado</h2>
+                            <p>
+                                Herramientas utilizadas para modelado, cálculo, análisis y diseño técnico en proyectos
+                                industriales y energéticos.
+                            </p>
+                        </div>
+                        <div className="software-media">
+                            <img src={engineeringSoftwareImage} alt="Software especializado para ingeniería y construcción" />
+                        </div>
                     </div>
                 </section>
 

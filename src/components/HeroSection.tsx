@@ -25,7 +25,7 @@ export default function HeroSection({ id, title, eyebrow, body, items, video, ct
 
             <div className="video-content">
                 {eyebrow && <span className="eyebrow">{eyebrow}</span>}
-                <h1>{title}</h1>
+                {home ? <h1>{title}</h1> : <h2>{title}</h2>}
                 {body && <p>{body}</p>}
                 {items && (
                     <ul className="feature-list">

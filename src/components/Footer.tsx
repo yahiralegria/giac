@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react';
 
 import { contact } from '@/lib/site';
 
@@ -7,7 +8,7 @@ export default function Footer() {
 
     return (
         <footer className="footer">
-            <div className="footer-grid">
+            <div className="footer-cta">
                 <section className="footer-brand">
                     <Link href="/" aria-label="Ir al inicio">
                         <img src="/assets/giac-logo.png" alt="GIAC Oil & Gas" />
@@ -18,6 +19,13 @@ export default function Footer() {
                     </p>
                 </section>
 
+                <Link className="footer-cta-link" href="/contact">
+                    Solicitar cotizacion
+                    <ArrowUpRight size={18} aria-hidden="true" />
+                </Link>
+            </div>
+
+            <div className="footer-grid">
                 <nav className="footer-column" aria-label="Navegacion del sitio">
                     <h3>Sitio</h3>
                     <Link href="/">Inicio</Link>
@@ -35,15 +43,24 @@ export default function Footer() {
 
                 <section className="footer-column">
                     <h3>Contacto</h3>
-                    <a href={contact.phoneHref}>{contact.phone}</a>
-                    <a href={contact.emailHref}>{contact.email}</a>
-                    <p>{contact.address}</p>
+                    <a className="footer-contact-link" href={contact.phoneHref}>
+                        <Phone size={18} aria-hidden="true" />
+                        {contact.phone}
+                    </a>
+                    <a className="footer-contact-link" href={contact.emailHref}>
+                        <Mail size={18} aria-hidden="true" />
+                        {contact.email}
+                    </a>
+                    <p className="footer-contact-link">
+                        <MapPin size={18} aria-hidden="true" />
+                        {contact.address}
+                    </p>
                 </section>
             </div>
 
             <div className="footer-bottom">
                 <p>GIAC (R) {year}. Todos los derechos reservados.</p>
-                <p>Oil & Gas · Ingenieria · Construccion</p>
+                <p>Ingenieria, construccion y servicios especializados.</p>
             </div>
         </footer>
     );
