@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="footer-grid">
                 <section className="footer-brand">
                     <Link href="/" aria-label="Ir al inicio">
-                        <img src="/assets/giac-logo-transparent.png" alt="GIAC Oil & Gas" />
+                        <img src="/assets/giac-logo.png" alt="GIAC Oil & Gas" />
                     </Link>
                     <p>
                         Soluciones integrales de ingenieria, construccion y servicios especializados para el sector
