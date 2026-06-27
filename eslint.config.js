@@ -30,7 +30,7 @@ export default [
         },
     },
     {
-        ignores: ['vendor', 'node_modules', 'public', 'bootstrap/ssr', 'tailwind.config.js'],
+        ignores: ['.next/**', 'out/**', 'node_modules/**', 'public/**', 'next-env.d.ts'],
     },
     prettier, // Turn off all rules that might conflict with Prettier
 ];
