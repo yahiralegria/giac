@@ -32,7 +32,7 @@ export default function Header() {
     return (
         <header className={solid ? 'site-header site-header-solid' : 'site-header'}>
             <Link href="/" className="brand" aria-label="Ir al inicio" onClick={() => setIsOpen(false)}>
-                <img src="/assets/giac-logo.png" alt="GIAC Oil & Gas" />
+                <img src="/assets/giac-logo.webp" alt="GIAC Oil & Gas" />
             </Link>
 
             <button
