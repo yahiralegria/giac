@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import { certifications } from '@/data/content';
+import { certificationsImage } from '@/data/content';
 
 export default function CertificationsPage() {
     return (
@@ -12,18 +12,13 @@ export default function CertificationsPage() {
                 <section className="section-heading">
                     <h1>Certificaciones</h1>
                     <p>
-                        Somos una empresa especializada en soluciones tecnologicas, respaldada por certificaciones ISO
+                        Somos una empresa especializada en soluciones tecnológicas, respaldada por certificaciones
                         que garantizan calidad, seguridad y eficiencia en nuestros procesos.
                     </p>
                 </section>
 
-                <section className="cert-grid">
-                    {certifications.map((certification) => (
-                        <article key={certification.id} className="cert-card">
-                            <img src={certification.image} alt={certification.name} />
-                            <h2>{certification.name}</h2>
-                        </article>
-                    ))}
+                <section className="certificate-showcase">
+                    <img src={certificationsImage} alt="Certificados y constancias de GIAC Oil & Gas" />
                 </section>
             </main>
         </>

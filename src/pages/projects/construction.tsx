@@ -5,7 +5,7 @@ import MediaCard from '@/components/MediaCard';
 import { projects } from '@/data/content';
 
 export default function ConstructionProjectsPage() {
-    const construction = projects.filter((project) => project.category === 'Construccion');
+    const construction = projects.filter((project) => project.category === 'Construcción');
 
     return (
         <>

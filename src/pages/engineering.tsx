@@ -4,19 +4,19 @@ import MediaCard from '@/components/MediaCard';
 import { services } from '@/data/content';
 
 export default function EngineeringPage() {
-    const engineering = services.filter((service) => service.category === 'Ingenieria');
+    const engineering = services.filter((service) => service.category === 'Ingeniería');
 
     return (
         <>
             <Head>
-                <title>Servicios de Ingenieria | GIAC Oil & Gas</title>
+                <title>Servicios de Ingeniería | GIAC Oil & Gas</title>
             </Head>
             <main className="page-shell">
                 <section className="section-heading">
-                    <h1>Servicios de Ingenieria</h1>
+                    <h1>Servicios de Ingeniería</h1>
                     <p>
-                        Desarrollamos proyectos industriales y de energia con altos estandares de calidad, seguridad y
-                        eficiencia, asegurando cumplimiento normativo y confiabilidad operativa.
+                        Desarrollamos ingeniería conceptual, básica y de detalle para proyectos energéticos e
+                        industriales, con enfoque en medición, regulación, análisis y control de fluidos.
                     </p>
                 </section>
 

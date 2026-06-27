@@ -1,8 +1,7 @@
 import Head from 'next/head';
 
 import HeroSection from '@/components/HeroSection';
-import MediaCard from '@/components/MediaCard';
-import { certifications, clients } from '@/data/content';
+import { certifications, clients, engineeringSoftwareImage } from '@/data/content';
 
 export default function HomePage() {
     return (
@@ -11,7 +10,7 @@ export default function HomePage() {
                 <title>GIAC Oil & Gas</title>
                 <meta
                     name="description"
-                    content="Soluciones de ingenieria, construccion y servicios especializados para el sector energetico e industrial."
+                    content="Soluciones de ingeniería, construcción y servicios especializados para el sector energético e industrial."
                 />
             </Head>
 
@@ -20,49 +19,60 @@ export default function HomePage() {
                     id="inicio"
                     home
                     title="Construyendo el futuro"
-                    body="GIAC OIL & GAS es una empresa mexicana, socialmente responsable. Realiza proyectos de ingenieria en gasoductos para Gas Natural e incursiona en proyectos integrales para el sector energetico, proponiendo soluciones innovadoras para la medicion, regulacion, analisis y control de fluidos."
+                    body="GIAC OIL & GAS es una empresa mexicana, socialmente responsable. Realiza proyectos de ingeniería en gasoductos para gas natural e incursiona en proyectos integrales para el sector energético, proponiendo soluciones innovadoras para la medición, regulación, análisis y control de fluidos."
                     video="/assets/header.webm"
-                    cta={{ href: '/projects/engineering', label: 'Conocer mas' }}
+                    cta={{ href: '/projects/engineering', label: 'Conocer más' }}
                 />
 
                 <HeroSection
                     id="ingenieria"
-                    title="Ingenieria"
-                    body="Ingenieria conceptual, basica y a detalle de:"
+                    title="Ingeniería"
+                    body="Ingeniería conceptual, básica y de detalle para sistemas energéticos e industriales:"
                     items={[
-                        'Sistemas de medicion de transferencia de custodia',
-                        'Tanques de almacenamiento',
-                        'Analisis estructural y de flexibilidad',
+                        'ERMyC, City Gates y ductos para transporte de fluidos',
+                        'Tanques API 650, sistemas de seguridad y control automatizado',
+                        'Modelado 3D, FARO 3D, análisis estructural y de flexibilidad',
                     ]}
                     video="/assets/ingenieria.webm"
-                    cta={{ href: '/engineering', label: 'Ver mas servicios' }}
+                    cta={{ href: '/engineering', label: 'Ver más servicios' }}
                 />
 
                 <HeroSection
                     id="construccion"
                     align="right"
-                    title="Construccion"
+                    title="Construcción"
                     items={[
-                        'Construccion, mantenimiento y fabricacion de trenes de medicion fiscal para hidrocarburos.',
-                        'Construccion, mantenimiento y fabricacion de trenes de medicion fiscal para medicion de agua.',
-                        'Construccion, mantenimiento y fabricacion de tanques presurizados.',
-                        'Construccion, mantenimiento y reparacion de tanques de almacenamiento.',
+                        'Construcción, mantenimiento y fabricación de trenes de medición fiscal para hidrocarburos.',
+                        'Construcción, mantenimiento y fabricación de trenes de medición fiscal para medición de agua.',
+                        'Construcción, mantenimiento y fabricación de tanques presurizados.',
+                        'Construcción, mantenimiento y reparación de tanques de almacenamiento.',
                     ]}
                     video="/assets/construccion.webm"
-                    cta={{ href: '/construction', label: 'Ver mas servicios' }}
+                    cta={{ href: '/construction', label: 'Ver más servicios' }}
                 />
 
+                <section className="software-section home-software">
+                    <div className="software-media">
+                        <img src={engineeringSoftwareImage} alt="Software especializado para ingeniería y construcción" />
+                    </div>
+                    <div className="software-copy">
+                        <span className="eyebrow blue">Software especializado</span>
+                        <h2>Software técnico para diseño, cálculo y modelado</h2>
+                        <p>
+                            Herramientas utilizadas para modelado, cálculo, análisis y diseño técnico en proyectos
+                            industriales y energéticos.
+                        </p>
+                    </div>
+                </section>
+
                 <section className="cert-section">
-                    <div className="split">
-                        <div>
-                            <span className="eyebrow blue">Certificaciones ISO</span>
-                            <h2>Sistema de gestion integral certificado</h2>
-                            <p>
-                                Nuestro sistema de gestion integra calidad, seguridad y responsabilidad ambiental para
-                                operar con estandares confiables en proyectos industriales y energeticos.
-                            </p>
-                            <a className="light-button" href="/certifications">Ver mas certificaciones</a>
-                        </div>
+                    <div className="cert-home-content">
+                        <span className="eyebrow blue">Certificaciones ISO</span>
+                        <h2>Sistema de gestión integral certificado</h2>
+                        <p>
+                            Nuestro sistema de gestión integra calidad, seguridad y responsabilidad ambiental para
+                            operar con estándares confiables en proyectos industriales y energéticos.
+                        </p>
                         <div className="cert-home-grid">
                             {certifications.map((certification) => (
                                 <article key={certification.id}>
@@ -70,22 +80,23 @@ export default function HomePage() {
                                 </article>
                             ))}
                         </div>
+                        <a className="light-button" href="/certifications">Ver más certificaciones</a>
                     </div>
                 </section>
 
                 <section className="clients-section">
-                    <div className="split clients-split">
-                        <div>
-                            <span className="eyebrow blue">Confianza institucional</span>
-                            <h2>Clientes que respaldan nuestra experiencia</h2>
-                            <p>
-                                Colaboramos con organizaciones del sector energetico, industrial e institucional,
-                                aportando soluciones tecnicas con enfoque en calidad, seguridad y cumplimiento.
-                            </p>
-                        </div>
+                    <div className="clients-content">
+                        <span className="eyebrow blue">Confianza institucional</span>
+                        <h2>Empresas e instituciones que han confiado en GIAC</h2>
+                        <p>
+                            Colaboramos con organizaciones del sector energético, industrial e institucional, aportando
+                            soluciones técnicas con enfoque en calidad, seguridad y cumplimiento.
+                        </p>
                         <div className="clients-grid">
                             {clients.map((client) => (
-                                <MediaCard key={client.name} name={client.name} image={client.image} />
+                                <article key={client.name} className="client-logo">
+                                    <img src={client.image} alt={client.name} />
+                                </article>
                             ))}
                         </div>
                     </div>
