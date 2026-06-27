@@ -1,4 +1,4 @@
-# GIAC.mx - Sitio publico
+# giac.mx - Sitio publico
 
 Sitio publico de GIAC Oil & Gas migrado a Next.js. El proyecto contiene solo el frontend visible para usuarios: landing, secciones informativas, servicios, proyectos, certificaciones y contacto.
 
