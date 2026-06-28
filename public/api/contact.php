@@ -36,7 +36,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$to = getenv('CONTACT_TO_EMAIL') ?: 'yahirhumberto04@gmail.com';
+$to = getenv('CONTACT_TO_EMAIL') ?: 'contacto@giac.mx';
 $from = getenv('MAIL_FROM') ?: 'no-reply@giac.mx';
 $safeName = str_replace(["\r", "\n"], ' ', $name);
 $safeEmail = str_replace(["\r", "\n"], ' ', $email);
