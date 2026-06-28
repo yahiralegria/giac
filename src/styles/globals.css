@@ -1,3 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+    --color-giac-ink: #07111f;
+    --color-giac-muted: #526071;
+    --color-giac-line: #d9e2ef;
+    --color-giac-blue: #1a73e8;
+    --color-giac-deep-blue: #00326d;
+    --color-giac-soft: #f4f7fb;
+}
+
 :root {
     --ink: #07111f;
     --muted: #526071;
@@ -198,6 +209,7 @@ video {
     padding-left: 24px;
     font-size: 18px;
     line-height: 1.7;
+    list-style: disc;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.68);
 }
 
@@ -356,10 +368,6 @@ video {
     gap: 24px;
 }
 
-.card-grid.two-col {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .media-card {
     overflow: hidden;
     border: 1px solid var(--line);
@@ -516,9 +524,7 @@ video {
 }
 
 .cert-home-grid,
-.cert-grid,
-.clients-grid,
-.values-grid {
+.clients-grid {
     display: grid;
     gap: 20px;
 }
@@ -613,69 +619,6 @@ video {
     max-width: 100%;
     max-height: 92px;
     object-fit: contain;
-}
-
-.values-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.value-card,
-.cert-card {
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    background: white;
-    padding: 30px;
-    text-align: center;
-    box-shadow: var(--shadow);
-}
-
-.value-card img {
-    width: 76px;
-    height: 76px;
-    margin: 0 auto 18px;
-}
-
-.value-card h2,
-.cert-card h2 {
-    margin: 0 0 12px;
-    font-size: 22px;
-}
-
-.value-card p {
-    margin: 0;
-    color: var(--muted);
-    line-height: 1.6;
-}
-
-.filter-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 30px;
-}
-
-.filter-tabs a {
-    min-width: 150px;
-    border-radius: 8px;
-    background: #e8edf4;
-    padding: 12px 18px;
-    font-weight: 800;
-}
-
-.filter-tabs a.active {
-    background: var(--blue);
-    color: white;
-}
-
-.cert-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.cert-card img {
-    width: min(190px, 100%);
-    height: 220px;
-    object-fit: contain;
-    margin: 0 auto 20px;
 }
 
 .contact-page {
@@ -1297,9 +1240,6 @@ video {
     }
 
     .card-grid,
-    .card-grid.two-col,
-    .values-grid,
-    .cert-grid,
     .cert-home-grid,
     .clients-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1344,10 +1284,7 @@ video {
     }
 
     .card-grid,
-    .card-grid.two-col,
-    .values-grid,
     .about-principles article,
-    .cert-grid,
     .clients-grid,
     .form-two {
         grid-template-columns: 1fr;
@@ -1384,10 +1321,6 @@ video {
 
     .software-content {
         gap: 34px;
-    }
-
-    .filter-tabs {
-        flex-direction: column;
     }
 
     .contact-form {

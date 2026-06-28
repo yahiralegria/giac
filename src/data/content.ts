@@ -339,19 +339,6 @@ export const services: CardItem[] = [
     },
 ];
 
-export const engineeringCapabilities = [
-    'ERMyC para medición, regulación y control de fluidos',
-    'City Gates para gas natural',
-    'Gasoductos, oleoductos y poliductos',
-    'Trampas de diablos y abrazaderas Split Sleeve',
-    'Sistemas de trasvase móvil y recuperación de vapores',
-    'Tanques de almacenamiento conforme a API 650',
-    'Sistemas de tierras y protección atmosférica',
-    'Sistemas de paro por emergencia, gas y fuego',
-    'Telemetría, telecomunicaciones y control automatizado',
-    'Análisis de flexibilidad, análisis estructural y revisión de ingenierías',
-];
-
 export const engineeringSoftwareImage = '/assets/engineering/software/software-especializado.webp';
 
 export const certificationsImage = '/assets/certifications/certificados.webp';

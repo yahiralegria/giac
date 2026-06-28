@@ -8,7 +8,7 @@ export default function ContactPage() {
             <Head>
                 <title>Contacto | GIAC Oil & Gas</title>
             </Head>
-            <main className="contact-page">
+            <main className="contact-page min-h-screen">
                 <ContactSection />
             </main>
         </>
