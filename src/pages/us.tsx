@@ -10,7 +10,7 @@ const companyHighlights = [
 const principles = [
     {
         icon: Target,
-        label: 'Misión',
+        label: 'Misió',
         text:
             'Ofrecer soluciones innovadoras e integrales con la mejor tecnología, garantizando que nuestros productos y servicios cumplan con los más altos estándares de calidad para satisfacción de nuestros clientes.',
     },
