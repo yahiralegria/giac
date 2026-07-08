@@ -119,7 +119,7 @@ export default function ContactSection() {
 
     return (
         <section className="contact-section">
-            <div className="section-heading section-heading-light contact-heading">
+            <div className="section-heading section-heading-light">
                 <h1>Háblanos de tu proyecto</h1>
                 <p>Estamos listos para ayudarte con tu próximo desafío.</p>
             </div>
@@ -129,9 +129,9 @@ export default function ContactSection() {
                     className="contact-info"
                     style={{
                         alignSelf: 'start',
-                        justifySelf: 'start',
+                        justifySelf: 'stretch',
                         display: 'grid',
-                        width: 'min(100%, 420px)',
+                        width: '100%',
                         gap: 14,
                     }}
                 >
