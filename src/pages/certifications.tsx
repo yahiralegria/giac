@@ -8,7 +8,7 @@ export default function CertificationsPage() {
             <Head>
                 <title>Certificaciones | GIAC Oil & Gas</title>
             </Head>
-            <main className="page-shell">
+            <main className="page-shell certifications-page">
                 <section className="section-heading">
                     <h1>Certificaciones</h1>
                     <p>

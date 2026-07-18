@@ -561,9 +561,16 @@ video {
 }
 
 .certificate-showcase {
-    width: min(1440px, calc(100vw - 40px));
-    margin-left: 50%;
-    transform: translateX(-50%);
+    width: min(1440px, calc(100% - 40px));
+    margin-inline: auto;
+}
+
+.page-shell.certifications-page {
+    width: 100%;
+}
+
+.certifications-page .section-heading {
+    width: min(900px, calc(100% - 40px));
 }
 
 .clients-section {
